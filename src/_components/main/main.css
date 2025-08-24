@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@400;600;800&family=Reem+Kufi:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=Mada:wght@200..900&family=Reem+Kufi:wght@400..700&display=swap');
+
+main {
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.hero-container {
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  min-width: 90%;
+  border-radius: 24px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    position: relative;
+  z-index: 10;
+  font-family: "Mada", sans-serif;
+  padding-top: 4rem;
+  background:
+    linear-gradient(to top, rgba(94, 170, 214, 0.466), rgba(94, 170, 214, 0.212)),
+    url('/c1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  filter: saturate(90%);
+  border: none;
+}
+.dark-theme .hero-container {
+  box-shadow: #5eaad6 0px 0px 20px 0px inset ;
+
+}
+
+.hero-text {
+  width: 100%;
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hero-text h1 , h2 {
+  font-family: "Reem Kufi", sans-serif;
+  font-weight: 500;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  font-weight: 800;
+  padding: 0 2rem;
+}
+
+.hero-title.primary {
+  color: #ffffff;
+  font-family: "Mada", sans-serif;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  padding: 0 2rem;
+  font-family: 'Reem Kufi', sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+  font-family: 'Fustat', sans-serif;
+}
+span{
+  font-family: 'Fustat', sans-serif;
+  font-weight: 600;
+}
+.hero-button {
+  border: 2px solid white;
+  background-color: white;
+  color: #00a2ff;
+  padding: 1rem 3rem;
+  text-decoration: none;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.hero-button:hover {
+  background-color: rgba(94, 170, 214, 0.466);
+  color: white;
+}
+
+.hero-image-section {
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.decor-atom,
+.decor-dna {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  z-index: 5;
+}
+
+.decor-atom {
+  top: 8%;
+  right: 2%;
+}
+
+.decor-dna {
+  top: 15%;
+  left: 10%;
+}
+
+.hero-image-desktop {
+  display: none;
+}
+
+.hero-image-mobile {
+  display: block;
+  filter: blur(4px);
+  padding: 0 2rem;
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  z-index: 1;
+}
+
+/* إظهار صورة الديسكتوب في الشاشات الكبيرة */
+@media (min-width: 768px) {
+  .hero-image-desktop {
+    display: block;
+    max-width: 80%;
+    margin: auto;
+    padding: 1rem;
+    z-index: 10;
+  }
+
+  .hero-image-mobile {
+    display: none;
+  }
+
+  .decor-scope {
+    display: block;
+  }
+}
+
+.decor-scope {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 2rem;
+  opacity: 0.5;
+  width: 80px;
+}
+
+.hero-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 400px;
+  background: linear-gradient(to top, #5eaad6, transparent);
+  z-index: 0;
+}
+
+.hero-about {
+  position: relative;
+  bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Reem Kufi', sans-serif;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.about-text h2 {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+/*Dark Mode */
+
+.dark-theme .hero-container {
+  background:
+    linear-gradient(to top, rgba(199, 10, 10, 0), rgba(199, 10, 10, 0)),
+    url('/c1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  filter: saturate(50%);
+}
+
+.dark-theme .hero-gradient {
+  background: linear-gradient(to top, #272424, transparent);
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 2rem 1rem;
+    min-height: 12vh;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text h2 {
+    font-size: 1.125rem;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .hero-button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+}
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .hero-container {
+   width: 80%;
+    padding: 1rem;
+    min-height: 30vh;
+  }
+  
+}
+
+/* Tablets (≤ 768px) */
+@media (min-width: 768px) {
+.hero-container {
+    padding: 1.5rem;
+    width: 95%;
+    max-height: 50vh;
+  }
+  .hero-text h1 {
+    font-size: 1.75rem;
+  }
+  .hero-text h2 {
+    font-size: 1rem;
+  }
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .hero-button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Small Laptops (≤ 1024px) */
+@media (min-width: 1024px) {
+.hero-container {
+    width: 70%;
+    padding: 1rem;
+    min-height: 50vh;
+    margin: 2% 15%;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text h2 {
+    font-size: 1.125rem;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  .hero-button {
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+  }
+}

@@ -1,0 +1,97 @@
+.register-container {
+  max-width: 600px;
+  margin: auto;
+  background: var(--bg-color);
+  padding: 2rem;
+  border-radius: 10px;
+  font-family: sans-serif;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+.form-step {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
+  transition: all 0.3s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #e91e63;
+}
+
+.progress-bar {
+  height: 8px;
+  background: var(--progress-bg);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.progress-bar .fill {
+  height: 100%;
+  background: #e91e63;
+  transition: width 0.4s ease;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #e91e63;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #c2185b;
+}
+
+/* ===================== */
+/*       Dark Mode       */
+/* ===================== */
+
+body {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --heading-color: #333;
+  --input-bg: #fff;
+  --input-text: #000;
+  --input-border: #ccc;
+  --progress-bg: #ddd;
+}
+
+body.dark-theme {
+  --bg-color: #1e1e1e;
+  --text-color: #eee;
+  --heading-color: #fff;
+  --input-bg: #2c2c2c;
+  --input-text: #fff;
+  --input-border: #555;
+  --progress-bg: #444;
+}

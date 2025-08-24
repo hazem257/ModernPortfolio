@@ -1,0 +1,74 @@
+.chem-loader {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.chem-loader.light {
+  background: radial-gradient(circle at center, #e0f7fa, #b2ebf2, #80deea);
+  color: #004d40;
+}
+
+.chem-loader.dark-theme {
+  background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+.test-tube {
+  position: relative;
+  width: 60px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid #00e0ff;
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+}
+
+.liquid {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+  border-radius: 0 0 30px 30px;
+}
+
+.chem-loader.light .liquid {
+  background: linear-gradient(180deg, #00bcd4, #0096c7);
+}
+
+.chem-loader.dark-theme .liquid {
+  background: linear-gradient(180deg, #00e0ff, #0096c7);
+}
+
+.bubbles {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bubble {
+  position: absolute;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background: #aefeff;
+  border-radius: 50%;
+}
+
+.bubble:nth-child(1) { left: -10px; }
+.bubble:nth-child(2) { left: 0px; }
+.bubble:nth-child(3) { left: 10px; }
+.bubble:nth-child(4) { left: 20px; }
+.bubble:nth-child(5) { left: -5px; }
+.bubble:nth-child(6) { left: 15px; }
+
+.loading-text {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #aefeff;
+}

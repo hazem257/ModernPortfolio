@@ -1,0 +1,138 @@
+:root {
+  --footer-bg: #f5f5f5;
+  --footer-text: #333;
+  --footer-title: #0077ff;
+  --footer-dark-bg: #111;
+  --footer-dark-text: #ddd;
+}
+
+body.dark-theme {
+  --footer-bg: var(--footer-dark-bg);
+  --footer-text: var(--footer-dark-text);
+}
+
+.custom-footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 3rem 1.5rem;
+  direction: rtl;
+  font-family: 'Cairo', sans-serif;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  height: 190px;
+  margin-bottom: 1rem;
+}
+
+.footer-copy {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+}
+
+.footer-copy a.footer-brand-link {
+  color: var(--footer-title);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-copy a.footer-brand-link:hover {
+  color: #0056b3;
+}
+
+.footer-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-column {
+  min-width: 150px;
+}
+
+.footer-column h4 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--footer-title);
+}
+
+.footer-column a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0.3rem 0;
+  display: flex;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: var(--footer-title);
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.fade-delay-1 { animation-delay: 0.2s; }
+.fade-delay-2 { animation-delay: 0.4s; }
+.fade-delay-3 { animation-delay: 0.6s; }
+.fade-delay-4 { animation-delay: 0.8s; }
+
+/* Responsive */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-left {
+    width: 40%;
+  }
+
+  .footer-right {
+    width: 60%;
+  }
+}
