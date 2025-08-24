@@ -1,0 +1,158 @@
+main.flex{
+    gap: 2.6rem;
+    align-items: start;
+}
+/*
+======================
+Left Section buttons
+======================
+*/
+
+main section.left-sec.flex{
+    flex-direction: column;
+    gap: 10px;
+}
+main section.left-sec.flex button{
+    background-color: rgba(23,37,46,1);
+    width: 11rem;
+    padding: 0.7rem 0;
+    text-align: center;
+    font-size: 1.06rem;
+    text-transform: capitalize;
+    opacity: 0.5;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: whitesmoke;
+    font:bold ;
+}
+main section.left-sec.flex button.Active{
+    opacity: 1;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0.8rem 0;
+    border: 1px solid var(--blue);
+}
+.light main section.left-sec.flex button.Active{
+    border: none;
+}
+main section.left-sec.flex button:hover{
+opacity: 1;
+}
+
+
+
+
+/*
+======================
+Right Section ==>cards
+======================
+*/
+main section.right-sec.flex{
+   flex-grow: 1;
+   flex-wrap: wrap;
+   gap: 30px;
+   column-gap: 16px;
+   row-gap: 2rem;
+   justify-content: center;
+
+}
+.card{
+   border: 1px solid rgba(93 ,188 ,252 ,0.3); 
+
+   transition: 0.3s;
+   border-radius: 5px;
+   background-image: linear-gradient(rgba(255,255,255,0.05),rgba(255,255,255,0.05));
+   
+}
+.light .card {
+       border: none; 
+    box-shadow:-1px 1px 1px rgba(0,0,0,0.16),1px 1px 1px rgba(0,0,0,0.15) ;
+
+
+}
+
+.card img{
+   border-radius: 5px;
+   
+}
+.card:hover{
+       border: 1px solid var(--blue); 
+       rotate: 3deg;
+       scale: 1.1;
+       cursor: pointer;
+
+}
+.card .box{
+    padding: 1rem  0.4rem;
+    
+
+}
+.card .box .title1{
+    color: var(--title);
+    text-transform: capitalize;
+    
+}
+.card .box .subtitle{
+    color: var(--subtitle);
+    font-size: 0.8rem;
+    margin-top: 0.7rem;
+    margin-bottom: 1.1rem;
+}
+.card .box .icons{
+    justify-content: space-between;
+}
+.card .icon-link , .card .icon-github{
+    font-size: 1.2rem;
+    color: var(--subtitle);
+    transition: 0.3s;
+}
+
+.card .icon-link:hover , .card .icon-github:hover{
+    font-size: 1.3rem;
+    color: var(--icon-hover);
+    cursor: pointer;
+}
+.card a.link{
+    font-size: 0.9rem;
+    color: var(--blue);
+    margin-right: 12px;
+}
+
+.subtitle {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width:600px) {
+    main.flex{
+        flex-direction: column;
+    gap: 2.6rem;
+    align-items: center;
+}
+main section.left-sec.flex{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+main section.left-sec.flex button{
+    width: 7rem;
+    padding: 0.8rem 0;
+    font-size: 0.9rem;
+}
+    
+}
+
+
+
+
+
+
+
+
+
+

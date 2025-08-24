@@ -1,0 +1,167 @@
+.experience {
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.05); /* خلفية شفافة شبه بيضاء */
+  backdrop-filter: blur(8px); /* تأثير ضبابي للخلفية */
+  text-align: center;
+  transition: background 0.5s ease, color 0.5s ease;
+  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 9rem;
+  border-top-left-radius: 10rem;
+  border-bottom-right-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 💡 Animation خلفية متدرجة بتتحرك */
+.experience::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, #38bdf8, #9333ea, #f43f5e, #38bdf8);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  opacity: 0.08; /* خفف التدرج علشان يبقى شفاف */
+  z-index: 0;
+}
+
+/* نصوص وعناصر الكارد تبقى فوق الخلفية */
+.experience h1,
+.skills-grid,
+.skill-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark Mode */
+.dark .experience {
+  background: rgba(17, 17, 17, 0.3); /* خلفية شفافة في الوضع الداكن */
+  color: #eee;
+  box-shadow: inset rgb(110, 110, 202) 1px 1px 10px 0px;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.experience h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+  position: relative;
+  z-index: 1;
+  animation: fadeDown 1s ease-in-out;
+  font-family: 'Poppins'
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s, color 0.4s;
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+.skill-card:nth-child(1) { animation-delay: 0.2s; }
+.skill-card:nth-child(2) { animation-delay: 0.4s; }
+.skill-card:nth-child(3) { animation-delay: 0.6s; }
+.skill-card:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+}
+
+/* عنوان الكارت */
+.skill-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+/* عناصر الليست */
+.skill-card li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #555;
+  transition: color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.skill-card li:hover {
+  color: #007bff;
+  transform: translateX(6px);
+}
+
+.icon {
+  font-size: 1.6rem;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.skill-card li:hover .icon {
+  transform: rotate(12deg) scale(1.2);
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
+/* 🌙 Dark Mode */
+.dark .experience {
+  background: #111;
+  color: #eee;
+  box-shadow: inset rgb(110, 110, 202) 1px 1px 10px 0px;
+}
+
+.dark .experience h1 {
+  color: #f2f2f2;
+}
+
+.dark .skill-card {
+  background: #1a1a1a;
+  color: #ddd;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+}
+
+.dark .skill-card:hover {
+  background: linear-gradient(145deg, #1a1a1a, #222);
+}
+
+.dark .skill-card h2 {
+  color: #f0f0f0;
+  border-color: #444;
+}
+
+.dark .skill-card li {
+  color: #bbb;
+}
+
+.dark .skill-card li:hover {
+  color: #38bdf8;
+}
