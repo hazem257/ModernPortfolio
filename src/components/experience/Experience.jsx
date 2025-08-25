@@ -20,7 +20,7 @@ const Experience = () => {
         { name: "Node.js", icon: <FaNodeJs className="node" /> },
         { name: "Express", icon: <SiExpress className="express" /> },
         { name: "PHP", icon: <FaPhp className="php" /> },
-        { name: "Laravel", icon: <SiLaravel className="laravel" /> },
+       /*{ { name: "Laravel", icon: <SiLaravel className="laravel" /> },}*/
         {name:"NestJs" , icon:<SiNestjs />}
       ],
     },
