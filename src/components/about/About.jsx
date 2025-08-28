@@ -22,7 +22,7 @@ const About = () => {
       icon: <GraduationCap size={32} />,
       title: "Education",
       value: "B.Sc. Computer Science & Security",
-      desc: "Beni-Suef National University (2022–2026)",
+      desc: "Beni-Suef National University (2023–2027)",
     },
     {
       id: 4,
