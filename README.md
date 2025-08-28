@@ -1,12 +1,23 @@
-# React + Vite
+A modern, responsive personal portfolio built with React for the frontend and NestJS for the backend. The project showcases my certificates, projects, and contact form, all powered by a clean REST API.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend Features:
 
-Currently, two official plugins are available:
+Interactive certificate cards with Parallax, Glassmorphism, and shine effects
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Smooth animations with Framer Motion
 
-## Expanding the ESLint configuration
+Fully responsive layout for desktop and mobile
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Dark mode support with dynamic theme switch
+
+Optimized for performance and accessibility
+
+Backend Features:
+
+NestJS REST API serving certificates, projects, and contact submissions
+
+Type-safe DTOs and validation for robust data handling
+
+Secure endpoints and efficient database queries (MongoDB/PostgreSQL)
+
+Tech Stack: React, TailwindCSS, Framer Motion, NestJS, Node.js, Express, TypeScript, MongoDB/PostgreSQL
