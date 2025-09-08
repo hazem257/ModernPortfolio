@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://hazemgamal-sable.vercel.app/</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- صفحة المشاريع -->
+  <url>
+    <loc>https://hazemgamal-sable.vercel.app/project/1</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- صفحة الداشبورد للمشاريع -->
+  <url>
+    <loc>https://hazemgamal-sable.vercel.app/projectDash</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- صفحة شهادات -->
+  <url>
+    <loc>https://hazemgamal-sable.vercel.app/certificatedash</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
