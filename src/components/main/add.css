@@ -1,0 +1,110 @@
+/* 🎨 تعريف ألوان ديناميكية */
+:root {
+  --bg-color: #f5f7fa;
+  --text-color: #333;
+  --form-bg: #fff;
+  --input-bg: #fff;
+  --input-border: #ddd;
+  --label-color: #555;
+  --btn-bg: #6366f1;
+  --btn-bg-hover: #4f46e5;
+  --btn-text: #fff;
+}
+
+/* 🌙 الوضع الداكن */
+.dark {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    --form-bg: #1e1e1e;
+    --input-bg: #2a2a2a;
+    --input-border: #444;
+    --label-color: #ccc;
+    --btn-bg: #4f46e5;
+    --btn-bg-hover: #6366f1;
+    --btn-text: #fff;
+  }
+
+
+/* خلفية الصفحة */
+.add-projects-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 40px 20px;
+  background: var(--bg-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+}
+
+/* العنوان */
+.form-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* صندوق الفورم */
+.form-box {
+  width: 100%;
+  max-width: 500px;
+  background: var(--form-bg);
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* عناصر الفورم */
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--label-color);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+  background: var(--input-bg);
+  color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 5px rgba(99, 102, 241, 0.3);
+}
+
+/* زرار الإضافة */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: var(--btn-bg-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+}

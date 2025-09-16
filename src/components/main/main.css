@@ -1,0 +1,217 @@
+/* ========= Layout ========= */
+main.flex {
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  flex-direction: column;
+}
+
+/* ========= Left Buttons ========= */
+main section.left-sec.flex {
+  flex-direction: row;
+  gap: 14px;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+main section.left-sec.flex button {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  width: 12rem;
+  padding: 0.8rem 0;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  color: #222;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+main section.left-sec.flex button:hover {
+  transform: translateX(6px) scale(1.05);
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.4);
+}
+
+/* Active Button */
+main section.left-sec.flex button.Active {
+  background: linear-gradient(120deg, #3b82f6, #9333ea, #f43f5e);
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 4px 20px rgba(96, 165, 250, 0.5);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+/* ========= Right Section (Cards Grid) ========= */
+main section.right-sec.flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  width: 100%;
+  justify-items: center;
+  align-items: stretch;
+}
+
+/* ========= Card ========= */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.25),
+              0 0 25px rgba(96,165,250,0.35);
+  border: 1px solid rgba(96,165,250,0.5);
+}
+
+/* Image */
+.card-img img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-img img {
+  transform: scale(1.08);
+}
+
+/* Content */
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
+  
+}
+
+.card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  background: linear-gradient(90deg, #2563eb, #9333ea, #f43f5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s ease infinite;
+}
+
+.card-subtitle {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: start;
+}
+
+/* Footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 14px;
+}
+
+.links a {
+  font-size: 1.3rem;
+  color: #666;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: #2563eb;
+  transform: scale(1.2) rotate(6deg);
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
+.more-link {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s;
+}
+
+.more-link:hover {
+  color: #9333ea;
+  transform: translateX(6px);
+}
+
+/* ========= 🌙 Dark Mode ========= */
+body.dark main section.left-sec.flex button {
+  color: #e5e7eb;
+  background: rgba(30,41,59,0.45);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+body.dark main section.left-sec.flex button:hover {
+  box-shadow: 0 0 14px rgba(96,165,250,0.4);
+}
+body.dark .card {
+  background: rgba(30,41,59,0.55);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+body.dark .card-subtitle {
+  color: #ddd;
+}
+body.dark .links a {
+  color: #aaa;
+}
+body.dark .links a:hover {
+  color: #38bdf8;
+}
+
+/* ========= Responsive ========= */
+@media (max-width: 900px) {
+  main section.right-sec.flex {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  main section.right-sec.flex {
+    grid-template-columns: 1fr;
+  }
+  main section.left-sec.flex button {
+    width: 8.5rem;
+    font-size: 0.9rem;
+  }
+}

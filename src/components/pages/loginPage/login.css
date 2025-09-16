@@ -1,0 +1,115 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #3b82f6, #9333ea, #f43f5e);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.login-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg,#38bdf8,#a855f7,#f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 1.2rem;
+  text-align: right;
+}
+
+.input-group label {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  display: block;
+  color: #f1f5f9;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56,189,248,0.6);
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(120deg,#3b82f6,#9333ea,#f43f5e);
+  background-size: 200% 200%;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.35s;
+  animation: gradientShift 6s ease infinite;
+}
+
+.login-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* Links */
+.extra-links {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+}
+
+.extra-links a {
+  color: #38bdf8;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.extra-links a:hover {
+  color: #f472b6;
+}
